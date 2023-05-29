@@ -47,6 +47,30 @@ function createRandomNumber(min, max){
 }
 
 
+// FUNZIONE CHE CONTROLLA OGNI NUMERO RANDOM GENERATO PER L'ARRAY DELLE BOMBE
+function checkArrayBombs(arrayBombs, max){
+
+    // VARIABILE DI CONTROLLO
+    let numberCheck = false;
+
+    // VARIABILE CHE CONTIENE IL NUMERO CASUALE
+    let randomNumber;
+
+    while (numberCheck === false){
+
+        // GENERO IL NUMERO CASUALE
+        randomNumber = createRandomNumber(1, max);
+
+        if(!arrayBombs.includes(randomNumber)){ // L'ARRAY DELLE BOMBE NON INCLUDE IL NUMERO CASUALE GENERATO
+
+            numberCheck = true;
+        }
+    }
+
+    return randomNumber;
+}
+
+
 // RECUPERO IL BUTTON HTML "PLAY" E LO INSERISCO IN UNA CONSTANTE
 const playButton = document.getElementById('play');
 

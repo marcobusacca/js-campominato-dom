@@ -101,6 +101,8 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
     - Dichiarare una Variabile che definisce il Numero di Caselle Senza Bombe cliccate dall'utente (let validSquareClicked = 0);
 
+    - Dichiarare una Variabile che definisce Se l'utente ha perso (let gameOver = false);
+
 
     - ? switch (difficult):
 
@@ -118,21 +120,27 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
                 - QUANDO l'utente clicca nell'elemento (square):
 
-                    - ? SE l'arrayBombs NON include l'Indice dell'elemento cliccato dall'utente (!arrayBombs.includes(parseInt(this.innerText))), ALLORA: // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
+                    - ? SE (gameOver === false), ALLORA:
 
-                        - Aggiungo al blocco cliccato la classe "square_selected": this.classList.add('square_selected');
+                        - ? SE l'arrayBombs NON include l'Indice dell'elemento cliccato dall'utente (!arrayBombs.includes(parseInt(this.innerText))), ALLORA: // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
 
-                        - Incremento la Variabile validSquareClicked;
+                            - Aggiungo al blocco cliccato la classe "square_selected": this.classList.add('square_selected');
 
-                        - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+                            - Incremento la Variabile validSquareClicked;
 
-                            - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                            - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
-                    - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+                                - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
-                        - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+                                - GameOver = true.
 
-                        - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                        - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+
+                            - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+
+                            - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+
+                            - GameOver = true.
 
                 - Appendere (append) dentro la Constante (grid) la Constante (square).
 
@@ -153,21 +161,27 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
                 - QUANDO l'utente clicca nell'elemento (square):
 
-                    - ? SE l'arrayBombs NON include l'Indice dell'elemento cliccato dall'utente (!arrayBombs.includes(parseInt(this.innerText))), ALLORA: // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
+                    - ? SE (gameOver === false), ALLORA:
 
-                        - Aggiungo al blocco cliccato la classe "square_selected": this.classList.add('square_selected');
+                        - ? SE l'arrayBombs NON include l'Indice dell'elemento cliccato dall'utente (!arrayBombs.includes(parseInt(this.innerText))), ALLORA: // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
 
-                        - Incremento la Variabile validSquareClicked;
+                            - Aggiungo al blocco cliccato la classe "square_selected": this.classList.add('square_selected');
 
-                        - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+                            - Incremento la Variabile validSquareClicked;
 
-                            - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                            - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
-                    - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+                                - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
-                        - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+                                - GameOver = true.
 
-                        - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                        - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+
+                            - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+
+                            - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+
+                            - GameOver = true.
 
                 - Appendere (append) dentro la Constante (grid) la Constante (square).
 
@@ -188,22 +202,28 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
                 - QUANDO l'utente clicca nell'elemento (square):
 
-                    - ? SE l'arrayBombs NON include l'Indice dell'elemento cliccato dall'utente (!arrayBombs.includes(parseInt(this.innerText))), ALLORA: // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
+                    - ? SE (gameOver === false), ALLORA:
 
-                        - Aggiungo al blocco cliccato la classe "square_selected": this.classList.add('square_selected');
+                        - ? SE l'arrayBombs NON include l'Indice dell'elemento cliccato dall'utente (!arrayBombs.includes(parseInt(this.innerText))), ALLORA: // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
 
-                        - Incremento la Variabile validSquareClicked;
+                            - Aggiungo al blocco cliccato la classe "square_selected": this.classList.add('square_selected');
 
-                        - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+                            - Incremento la Variabile validSquareClicked;
 
-                            - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                            - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
-                    - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+                                - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
-                        - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+                                - GameOver = true.
 
-                        - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                        - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
 
+                            - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+
+                            - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+
+                            - GameOver = true.
+                            
                 - Appendere (append) dentro la Constante (grid) la Constante (square).
 
         - break;

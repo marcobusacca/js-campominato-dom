@@ -156,6 +156,10 @@ body{
         .square_bomb{
             background-color: red;
         }
+
+        .square_first_bomb{
+            border: 5px solid black;
+        }
     /* FINE SQUARE UTILITIES */
 /* FINE UTILITIES */
 

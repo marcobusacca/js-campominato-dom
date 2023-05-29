@@ -180,6 +180,9 @@ playButton.addEventListener("click", function(){
                             }
     
                         } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+
+                            // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_FIRST_BOMB"
+                            this.classList.add('square_first_bomb');
     
                             // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
                             let squares = document.querySelectorAll('.square');
@@ -259,6 +262,9 @@ playButton.addEventListener("click", function(){
                             }
     
                         } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+
+                            // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_FIRST_BOMB"
+                            this.classList.add('square_first_bomb');
     
                             // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
                             let squares = document.querySelectorAll('.square');
@@ -338,6 +344,9 @@ playButton.addEventListener("click", function(){
                             }
     
                         } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+
+                            // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_FIRST_BOMB"
+                            this.classList.add('square_first_bomb');
     
                             // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
                             let squares = document.querySelectorAll('.square');

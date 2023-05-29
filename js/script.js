@@ -131,6 +131,9 @@ playButton.addEventListener("click", function(){
             // ASSEGNO LA GRANDEZZA TOTALE DELLA GRIGLIA
             gridSize = 100;
 
+            // RICHIAMO LA FUNZIONE PER GENERARE LE BOMBE
+            generateArrayBombs(arrayBombs, gridSize, bombSize);
+
             // CICLO FOR CHE CREA TUTTI GLI ELEMENTI DELLA GRIGLIA
             for (let i = 1; i <= gridSize; i++){
 
@@ -157,6 +160,9 @@ playButton.addEventListener("click", function(){
             // ASSEGNO LA GRANDEZZA TOTALE DELLA GRIGLIA
             gridSize = 81;
 
+            // RICHIAMO LA FUNZIONE PER GENERARE LE BOMBE
+            generateArrayBombs(arrayBombs, gridSize, bombSize);
+
             // CICLO FOR CHE CREA TUTTI GLI ELEMENTI DELLA GRIGLIA
             for (let i = 1; i <= gridSize; i++){
 
@@ -182,6 +188,9 @@ playButton.addEventListener("click", function(){
 
             // ASSEGNO LA GRANDEZZA TOTALE DELLA GRIGLIA
             gridSize = 49;
+
+            // RICHIAMO LA FUNZIONE PER GENERARE LE BOMBE
+            generateArrayBombs(arrayBombs, gridSize, bombSize);
 
             // CICLO FOR CHE CREA TUTTI GLI ELEMENTI DELLA GRIGLIA
             for (let i = 1; i <= gridSize; i++){

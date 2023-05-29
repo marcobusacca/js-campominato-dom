@@ -39,6 +39,14 @@ function createHardSquare(){
 }
 
 
+// FUNZIONE CHE GENERA UN NUMERO CASUALE
+function createRandomNumber(min, max){
+
+    // CREA UN NUMERO RANDOM E LO RESTITUISCE
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
 // RECUPERO IL BUTTON HTML "PLAY" E LO INSERISCO IN UNA CONSTANTE
 const playButton = document.getElementById('play');
 
@@ -140,6 +148,3 @@ playButton.addEventListener("click", function(){
         break;
     }
 })
-
-
-

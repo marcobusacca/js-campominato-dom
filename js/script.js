@@ -81,7 +81,7 @@ function generateArrayBombs(arrayBombs, max, maxBombs){
         arrayBombs.push(randomNumber);
     }
     
-    console.log(arrayBombs.sort(function(a, b){return a-b})); // ALLA FINE DELL'ESERCIZIO RIMUOVERLO
+    // console.log(arrayBombs.sort(function(a, b){return a-b})); // ALLA FINE DELL'ESERCIZIO RIMUOVERLO
 }
 
 

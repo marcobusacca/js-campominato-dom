@@ -80,6 +80,13 @@ body{
         display: flex;
         flex-flow: row wrap;
     }
+
+    main #message{
+        width: 100%;
+        margin: 10px 0;
+        font-weight: 700;
+        text-align: center;
+    }
 /* FINE MAIN */
 
 /* FOOTER */

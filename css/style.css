@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+    header{
+        height: 100px;
+        background-color: #fff;
+    }
+
+    header .row{
+        justify-content: space-between;
+    }
+
+    header .col{
+        margin: 0 20px;
+    }
+
+    header .col:last-child{
+        display: flex;
+        align-items: center;
+    }
+
+    header img{
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    header h1{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+
+    header button{
+        padding: 4px 32px;
+    }
+
+    header label{
+        font-weight: 500;
+    }
+
+    header select{
+        margin-right: 5px;
+        padding: 3px 0;
+        padding-right: 100px;
+        background-color: #F0F0F0;
+    }
+
+    header button,
+    header select{
+        border: 1px solid rgb(170, 169, 169);
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+/* FINE HEADER */
+
+/* MAIN */
+    main{
+        height: calc(100vh - 180px);
+        background-color: #7FFFD4;
+        overflow-y: auto;
+    }
+
+    main .row{
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .col{
+        width: 800px;
+        height: 800px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+/* FINE MAIN */
+
+/* FOOTER */
+    footer{
+        height: 80px;
+        background-color: #fff;
+    }
+
+    footer .col{
+        margin: 0 20px;
+    }
+
+    footer .col > *{
+        font-weight: 500;
+    }
+
+    footer label{
+        font-size: 20px;
+    }
+/* FINE FOOTER */
+
+/* UTILITIES */
+    .container{
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .row{
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    /* SQUARE UTILITIES */
+        .square{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: 500;
+            background-color: #fff;
+        }
+
+        .easy_square{
+            width: calc(800px / 10);
+            height: calc(800px / 10);
+        }
+
+        .medium_square{
+            width: calc(800px / 9);
+            height: calc(800px / 9);
+        }
+
+        .hard_square{
+            width: calc(800px / 7);
+            height: calc(800px / 7);
+        }
+
+        .square_selected{
+            background-color: #7FFFD4;
+        }
+    /* FINE SQUARE UTILITIES */
+/* FINE UTILITIES */
+
+/* LAYOUT RESPONSIVE */
+
+    /* GRID HEIGHT ADJUSTMENT */
+        @media screen and (max-height: 1000px) {
+            main .col{
+                width: 650px;
+                height: 650px;
+            }
+            
+            .easy_square{
+                width: calc(650px / 10);
+                height: calc(650px / 10);
+            }
+
+            .medium_square{
+                width: calc(650px / 9);
+                height: calc(650px / 9);
+            }
+
+            .hard_square{
+                width: calc(650px / 7);
+                height: calc(650px / 7);
+            }
+        }
+
+        @media screen and (max-height: 850px) {
+            main .col{
+                width: 500px;
+                height: 500px;
+            }
+
+            .square{
+                font-size: 20px;
+            }
+            
+            .easy_square{
+                width: calc(500px / 10);
+                height: calc(500px / 10);
+            }
+
+            .medium_square{
+                width: calc(500px / 9);
+                height: calc(500px / 9);
+            }
+
+            .hard_square{
+                width: calc(500px / 7);
+                height: calc(500px / 7);
+            }
+        }
+
+        @media screen and (max-height: 700px) {
+            main .col{
+                width: 400px;
+                height: 400px;
+            }
+
+            .square{
+                font-size: 15px;
+            }
+
+            .easy_square{
+                width: calc(400px / 10);
+                height: calc(400px / 10);
+            }
+
+            .medium_square{
+                width: calc(400px / 9);
+                height: calc(400px / 9);
+            }
+
+            .hard_square{
+                width: calc(400px / 7);
+                height: calc(400px / 7);
+            }
+        }
+    /* FINE GRID HEIGHT ADJUSTMENT */
+
+/* FINE LAYOUT RESPONSIVE */

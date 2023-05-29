@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Collegamento a "style.css" -->
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- Font Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Collegamento a "script.js" -->
+        <script defer type="text/javascript" src="./js/script.js"></script>
+
+        <!-- Head Title -->
+        <title>js-campominato-dom</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <!-- Header Logo & Title Col -->
+                    <div class="col">
+                        <!-- Header Logo -->
+                        <img src="./img/logo.png" alt="boolean-logo">
+                        <!-- Header Title -->
+                        <h1>Campo Minato</h1>
+                    </div>
+                    <!-- Header Button Col -->
+                    <div class="col">
+                        <!-- Difficult Select Container -->
+                        <div>
+                            <!-- Difficult Label -->
+                            <label for="select_difficult">Difficoltà:</label>
+                            <!-- Difficult Select -->
+                            <select name="difficult" id="select_difficult">
+                                <!-- Difficult Easy -->
+                                <option value="1">Easy</option>
+                                <!-- Difficult Medium -->
+                                <option value="2">Medium</option>
+                                <!-- Difficult Hard -->
+                                <option value="3">Hard</option>
+                            </select>
+                        </div>
+                        <!-- Play Button -->
+                        <button id="play">Play</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- FINE HEADER -->
+        <!-- MAIN -->
+        <main>
+            <div class="container">
+                <div class="row">
+                    <!-- Main Grid Col -->
+                    <div class="col" id="grid"></div>
+                </div>
+            </div>
+        </main>
+        <!-- FINE MAIN -->
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Text Col -->
+                    <div class="col">
+                        <!-- Footer Text -->
+                        <div>
+                            <!-- First Span -->
+                            <span>Made with</span>
+                            <!-- Hearts Icon -->
+                            <label>&hearts;</label>
+                            <!-- Second Span -->
+                            <span>by</span>
+                            <!-- Boolean Link -->
+                            <a href="#">Boolean</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FINE FOOTER -->
+    </body>
+</html>

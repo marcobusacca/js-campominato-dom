@@ -166,7 +166,7 @@ body{
 /* LAYOUT RESPONSIVE */
 
     /* GRID HEIGHT ADJUSTMENT */
-        @media screen and (max-height: 1000px) {
+        @media screen and (max-height: 1050px) {
             main .col{
                 width: 650px;
                 height: 650px;
@@ -188,7 +188,7 @@ body{
             }
         }
 
-        @media screen and (max-height: 850px) {
+        @media screen and (max-height: 900px) {
             main .col{
                 width: 500px;
                 height: 500px;
@@ -214,7 +214,7 @@ body{
             }
         }
 
-        @media screen and (max-height: 700px) {
+        @media screen and (max-height: 750px) {
             main .col{
                 width: 400px;
                 height: 400px;

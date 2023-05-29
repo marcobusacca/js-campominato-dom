@@ -94,6 +94,9 @@ const playButton = document.getElementById('play');
 // L'UTENTE CLICCA SUL "PLAY_BUTTON"
 playButton.addEventListener("click", function(){
 
+    // RECUPERO IL VALORE INSERITO DALL'UTENTE TRAMITE LA DIFFICULT_SELECT HTML
+    const difficult = parseInt(document.getElementById('select_difficult').value);
+
     // RECUPERO IL CONTAINER HTML "GRID" E LO INSERISCO IN UNA CONSTANTE
     const grid = document.getElementById('grid');
 
@@ -107,10 +110,6 @@ playButton.addEventListener("click", function(){
     // RIPRISTINO IL CONTAINER HTML "MESSAGE" ALLA VERSIONE INIZIALE
     message.innerHTML = '';
     
-
-    // RECUPERO IL VALORE INSERITO DALL'UTENTE TRAMITE LA DIFFICULT_SELECT HTML
-    const difficult = parseInt(document.getElementById('select_difficult').value);
-
 
     // DICHIARO LA VARIABILE CHE DEFINISCE LA GRANDEZZA TOTALE DELLA GRIGLIA
     let gridSize;

@@ -81,6 +81,8 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
 - QUANDO l'utente clicca sul "playButton":
 
+    - Usare il comando "parseInt(document.getElementById('').value)" per recuperare la select HTML dove l'utente ha scelto la Difficoltà, ed inserirla in una Constante (difficult);
+
     - Usare il comando "document.getElementById('')" per recuperare il container HTML dove inserire la Griglia composta dagli Square, ed inserirlo in una Constante (grid);
 
     - Usare il comando "document.getElementById('')" per recuperare il container HTML dove inserire il Messaggio per l'utente, ed inserirlo in una Constante (message);
@@ -91,19 +93,14 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
     - Ripristino il Messaggio = message.innerHTML = '';
 
 
-    - Usare il comando "parseInt(document.getElementById('').value)" per recuperare la select HTML dove l'utente ha scelto la Difficoltà, ed inserirla in una Constante (difficult);
-
-
     - Dichiarare una Variabile che Definisce la Grandezza Totale della Griglia (gridSize);
-
 
     - Dichiarare una Constante che Definisce la Quantità Totale delle Bombe (const bombSize = 16);
 
     - Dichiarare l'array che conterrà le Bombe (let arrayBombs = []);
 
-
     - Dichiarare una Variabile che definisce il Numero di Caselle Senza Bombe cliccate dall'utente (let validSquareClicked = 0);
-    
+
 
     - ? switch (difficult):
 

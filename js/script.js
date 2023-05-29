@@ -159,6 +159,19 @@ playButton.addEventListener("click", function(){
                             validSquareClicked++;
     
                             if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+
+                                // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
+                                let squares = document.querySelectorAll('.square');
+
+                                // SCORRO TUTTI GLI ELEMENTI HTML DELL'ARRAY "SQUARES" DENTRO UN CICLO FOR
+                                for (let i = 0; i < squares.length; i++){
+
+                                    if (arrayBombs.includes(i+1)){ // L'ELEMENTO DELL'ATTUALE ITERAZIONE è INCLUSO NELL'ARRAY_BOMBS
+
+                                        // AGGIUNTO ALL'ELEMENTO LA CLASSE "SQUARE_BOMB"
+                                        squares[i].classList.add('square_bomb');
+                                    }
+                                }
     
                                 // STAMPO IL MESSAGGIO NEL DOM
                                 message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`;
@@ -168,8 +181,18 @@ playButton.addEventListener("click", function(){
     
                         } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
     
-                            // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_BOMB"
-                            this.classList.add('square_bomb');
+                            // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
+                            let squares = document.querySelectorAll('.square');
+
+                            // SCORRO TUTTI GLI ELEMENTI HTML DELL'ARRAY "SQUARES" DENTRO UN CICLO FOR
+                            for (let i = 0; i < squares.length; i++){
+
+                                if (arrayBombs.includes(i+1)){ // L'ELEMENTO DELL'ATTUALE ITERAZIONE è INCLUSO NELL'ARRAY_BOMBS
+
+                                    // AGGIUNTO ALL'ELEMENTO LA CLASSE "SQUARE_BOMB"
+                                    squares[i].classList.add('square_bomb');
+                                }
+                            }
     
                             // STAMPO IL MESSAGGIO NEL DOM
                             message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`;
@@ -215,6 +238,19 @@ playButton.addEventListener("click", function(){
                             validSquareClicked++;
     
                             if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+
+                                // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
+                                let squares = document.querySelectorAll('.square');
+
+                                // SCORRO TUTTI GLI ELEMENTI HTML DELL'ARRAY "SQUARES" DENTRO UN CICLO FOR
+                                for (let i = 0; i < squares.length; i++){
+
+                                    if (arrayBombs.includes(i+1)){ // L'ELEMENTO DELL'ATTUALE ITERAZIONE è INCLUSO NELL'ARRAY_BOMBS
+
+                                        // AGGIUNTO ALL'ELEMENTO LA CLASSE "SQUARE_BOMB"
+                                        squares[i].classList.add('square_bomb');
+                                    }
+                                }
     
                                 // STAMPO IL MESSAGGIO NEL DOM
                                 message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`;
@@ -224,8 +260,18 @@ playButton.addEventListener("click", function(){
     
                         } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
     
-                            // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_BOMB"
-                            this.classList.add('square_bomb');
+                            // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
+                            let squares = document.querySelectorAll('.square');
+
+                            // SCORRO TUTTI GLI ELEMENTI HTML DELL'ARRAY "SQUARES" DENTRO UN CICLO FOR
+                            for (let i = 0; i < squares.length; i++){
+
+                                if (arrayBombs.includes(i+1)){ // L'ELEMENTO DELL'ATTUALE ITERAZIONE è INCLUSO NELL'ARRAY_BOMBS
+
+                                    // AGGIUNTO ALL'ELEMENTO LA CLASSE "SQUARE_BOMB"
+                                    squares[i].classList.add('square_bomb');
+                                }
+                            }
     
                             // STAMPO IL MESSAGGIO NEL DOM
                             message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`;
@@ -271,6 +317,19 @@ playButton.addEventListener("click", function(){
                             validSquareClicked++;
     
                             if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+
+                                // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
+                                let squares = document.querySelectorAll('.square');
+
+                                // SCORRO TUTTI GLI ELEMENTI HTML DELL'ARRAY "SQUARES" DENTRO UN CICLO FOR
+                                for (let i = 0; i < squares.length; i++){
+
+                                    if (arrayBombs.includes(i+1)){ // L'ELEMENTO DELL'ATTUALE ITERAZIONE è INCLUSO NELL'ARRAY_BOMBS
+
+                                        // AGGIUNTO ALL'ELEMENTO LA CLASSE "SQUARE_BOMB"
+                                        squares[i].classList.add('square_bomb');
+                                    }
+                                }
     
                                 // STAMPO IL MESSAGGIO NEL DOM
                                 message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`;
@@ -280,8 +339,18 @@ playButton.addEventListener("click", function(){
     
                         } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
     
-                            // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_BOMB"
-                            this.classList.add('square_bomb');
+                            // PRENDO TUTTI GLI ELEMENTI HTML CHE HANNO LA CLASSE "SQUARE"
+                            let squares = document.querySelectorAll('.square');
+
+                            // SCORRO TUTTI GLI ELEMENTI HTML DELL'ARRAY "SQUARES" DENTRO UN CICLO FOR
+                            for (let i = 0; i < squares.length; i++){
+
+                                if (arrayBombs.includes(i+1)){ // L'ELEMENTO DELL'ATTUALE ITERAZIONE è INCLUSO NELL'ARRAY_BOMBS
+
+                                    // AGGIUNTO ALL'ELEMENTO LA CLASSE "SQUARE_BOMB"
+                                    squares[i].classList.add('square_bomb');
+                                }
+                            }
     
                             // STAMPO IL MESSAGGIO NEL DOM
                             message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`;

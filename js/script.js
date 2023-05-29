@@ -97,8 +97,16 @@ playButton.addEventListener("click", function(){
     // RECUPERO IL CONTAINER HTML "GRID" E LO INSERISCO IN UNA CONSTANTE
     const grid = document.getElementById('grid');
 
+    // RECUPERO IL CONTAINER HTML "MESSAGE" E LO INSERISCO IN UNA CONSTANTE
+    const message = document.getElementById('message');
+
+
     // RIPRISTINO IL CONTAINER HTML "GRID" ALLA VERSIONE INIZIALE
     grid.innerHTML = '';
+
+    // RIPRISTINO IL CONTAINER HTML "MESSAGE" ALLA VERSIONE INIZIALE
+    message.innerHTML = '';
+    
 
     // RECUPERO IL VALORE INSERITO DALL'UTENTE TRAMITE LA DIFFICULT_SELECT HTML
     const difficult = parseInt(document.getElementById('select_difficult').value);

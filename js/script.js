@@ -120,6 +120,9 @@ playButton.addEventListener("click", function(){
 
     // CREO L'ARRAY CHE CONTERRA LE BOMBE
     let arrayBombs = [];
+
+    // VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
+    let validSquareClicked = 0;
     
     // CONTROLLO CHE DIFFICOLTA HA SCELTO L'UTENTE
     switch (difficult){

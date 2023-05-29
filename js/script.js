@@ -111,8 +111,12 @@ playButton.addEventListener("click", function(){
     // RECUPERO IL VALORE INSERITO DALL'UTENTE TRAMITE LA DIFFICULT_SELECT HTML
     const difficult = parseInt(document.getElementById('select_difficult').value);
 
+
     // DICHIARO LA VARIABILE CHE DEFINISCE LA GRANDEZZA TOTALE DELLA GRIGLIA
     let gridSize;
+
+    // DICHIARO LA CONSTANTE CHE DEFINISCE QUANTE BOMBE GENERARE
+    const bombSize = 16;
     
     // CONTROLLO CHE DIFFICOLTA HA SCELTO L'UTENTE
     switch (difficult){

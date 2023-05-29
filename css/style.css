@@ -152,6 +152,10 @@ body{
         .square_selected{
             background-color: #7FFFD4;
         }
+
+        .square_bomb{
+            background-color: red;
+        }
     /* FINE SQUARE UTILITIES */
 /* FINE UTILITIES */
 

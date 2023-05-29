@@ -60,13 +60,11 @@ function checkArrayBombs(arrayBombs, max){
 
         // GENERO IL NUMERO CASUALE
         randomNumber = createRandomNumber(1, max);
-        console.log(randomNumber)
 
         if(!arrayBombs.includes(randomNumber)){ // L'ARRAY DELLE BOMBE NON INCLUDE IL NUMERO CASUALE GENERATO
 
             numberCheck = true;
         }
-        console.log(numberCheck)
     }
 
     return randomNumber;
@@ -146,8 +144,28 @@ playButton.addEventListener("click", function(){
                 // L'UTENTE CLICCA SU OGNI BLOCCO DELLA GRIGLIA
                 square.addEventListener("click", function(){
 
-                    // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
-                    this.classList.add('square_selected');
+                    if (!arrayBombs.includes(parseInt(this.innerText))){ // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
+
+                        // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
+                        this.classList.add('square_selected');
+
+                        // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
+                        validSquareClicked++;
+
+                        if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+
+                            // STAMPO IL MESSAGGIO NEL DOM
+                            message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                        }
+
+                    } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+
+                        // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_BOMB"
+                        this.classList.add('square_bomb');
+
+                        // STAMPO IL MESSAGGIO NEL DOM
+                        message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                    }
                 })
 
                 // INSERISCO IL CONTENUTO DELLA CONSTANTE SQUARE DENTRO LA CONSTANTE GRID
@@ -175,8 +193,28 @@ playButton.addEventListener("click", function(){
                 // L'UTENTE CLICCA SU OGNI BLOCCO DELLA GRIGLIA
                 square.addEventListener("click", function(){
 
-                    // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
-                    this.classList.add('square_selected');
+                    if (!arrayBombs.includes(parseInt(this.innerText))){ // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
+
+                        // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
+                        this.classList.add('square_selected');
+
+                        // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
+                        validSquareClicked++;
+
+                        if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+
+                            // STAMPO IL MESSAGGIO NEL DOM
+                            message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                        }
+
+                    } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+
+                        // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_BOMB"
+                        this.classList.add('square_bomb');
+
+                        // STAMPO IL MESSAGGIO NEL DOM
+                        message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                    }
                 })
 
                 // INSERISCO IL CONTENUTO DELLA CONSTANTE SQUARE DENTRO LA CONSTANTE GRID
@@ -204,8 +242,28 @@ playButton.addEventListener("click", function(){
                 // L'UTENTE CLICCA SU OGNI BLOCCO DELLA GRIGLIA
                 square.addEventListener("click", function(){
 
-                    // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
-                    this.classList.add('square_selected');
+                    if (!arrayBombs.includes(parseInt(this.innerText))){ // IL BLOCCO CLICCATO NON CONTIENE UNA BOMBA
+
+                        // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
+                        this.classList.add('square_selected');
+
+                        // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
+                        validSquareClicked++;
+
+                        if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
+
+                            // STAMPO IL MESSAGGIO NEL DOM
+                            message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                        }
+
+                    } else{ // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
+
+                        // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_BOMB"
+                        this.classList.add('square_bomb');
+
+                        // STAMPO IL MESSAGGIO NEL DOM
+                        message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
+                    }
                 })
 
                 // INSERISCO IL CONTENUTO DELLA CONSTANTE SQUARE DENTRO LA CONSTANTE GRID

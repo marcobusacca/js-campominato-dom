@@ -117,6 +117,9 @@ playButton.addEventListener("click", function(){
 
     // DICHIARO LA CONSTANTE CHE DEFINISCE QUANTE BOMBE GENERARE
     const bombSize = 16;
+
+    // CREO L'ARRAY CHE CONTERRA LE BOMBE
+    let arrayBombs = [];
     
     // CONTROLLO CHE DIFFICOLTA HA SCELTO L'UTENTE
     switch (difficult){

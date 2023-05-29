@@ -60,14 +60,30 @@ function checkArrayBombs(arrayBombs, max){
 
         // GENERO IL NUMERO CASUALE
         randomNumber = createRandomNumber(1, max);
+        console.log(randomNumber)
 
         if(!arrayBombs.includes(randomNumber)){ // L'ARRAY DELLE BOMBE NON INCLUDE IL NUMERO CASUALE GENERATO
 
             numberCheck = true;
         }
+        console.log(numberCheck)
     }
 
     return randomNumber;
+}
+
+
+// FUNZIONE CHE GENERA LE BOMBE
+function generateArrayBombs(arrayBombs, max, maxBombs){
+
+    for (let i = 1; i <= maxBombs; i++){
+
+        let randomNumber = checkArrayBombs(arrayBombs, max);
+    
+        arrayBombs.push(randomNumber);
+    }
+    
+    console.log(arrayBombs.sort(function(a, b){return a-b})); // ALLA FINE DELL'ESERCIZIO RIMUOVERLO
 }
 
 

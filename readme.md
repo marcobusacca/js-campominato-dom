@@ -130,13 +130,27 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
                             - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
+                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
+
+                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
+
+                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
+
+                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+
                                 - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
                                 - GameOver = true.
 
                         - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
 
-                            - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
+
+                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
+
+                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
+
+                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
 
                             - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
@@ -171,13 +185,27 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
                             - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
+                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
+
+                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
+
+                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
+
+                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+
                                 - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
                                 - GameOver = true.
 
                         - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
 
-                            - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
+
+                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
+
+                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
+
+                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
 
                             - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
@@ -212,18 +240,32 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
                             - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
+                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
+
+                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
+
+                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
+
+                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+
                                 - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
                                 - GameOver = true.
 
                         - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
 
-                            - Aggiungo al blocco cliccato la classe "square_bomb": this.classList.add('square_bomb');
+                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
+
+                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
+
+                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
+
+                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
 
                             - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
                             - GameOver = true.
-                            
+
                 - Appendere (append) dentro la Constante (grid) la Constante (square).
 
         - break;

@@ -136,6 +136,10 @@ playButton.addEventListener("click", function(){
     // CREO L'ARRAY CHE CONTERRA LE BOMBE
     let arrayBombs = [];
 
+    // CREO UN ARRAY DOVE INSERISCO TUTTI GLI SQUARE SENZA BOMBE CLICCATI DALL'UTENTE
+    let squareSelected = [];
+
+
     // VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
     let validSquareClicked = 0;
 
@@ -172,9 +176,16 @@ playButton.addEventListener("click", function(){
     
                             // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
                             this.classList.add('square_selected');
-    
-                            // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
-                            validSquareClicked++;
+
+                            // CONTROLLO CHE L'UTENTE NON ABBIA GIA CLICCATO IL QUADRATO DI OGNI ITERAZIONE
+                            if (!squareSelected.includes(this.innerText)){
+
+                                // INSERISCO L'ELEMENTO ATTUALE CLICCATO DENTRO L'ARRAY "SQUARE_SELECTED"
+                                squareSelected.push(this.innerText);
+
+                                // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
+                                validSquareClicked++;
+                            }
     
                             if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
@@ -235,8 +246,15 @@ playButton.addEventListener("click", function(){
                             // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
                             this.classList.add('square_selected');
     
-                            // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
-                            validSquareClicked++;
+                            // CONTROLLO CHE L'UTENTE NON ABBIA GIA CLICCATO IL QUADRATO DI OGNI ITERAZIONE
+                            if (!squareSelected.includes(this.innerText)){
+
+                                // INSERISCO L'ELEMENTO ATTUALE CLICCATO DENTRO L'ARRAY "SQUARE_SELECTED"
+                                squareSelected.push(this.innerText);
+
+                                // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
+                                validSquareClicked++;
+                            }
     
                             if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
@@ -297,8 +315,15 @@ playButton.addEventListener("click", function(){
                             // AGGIUNGO AL BLOCCO CLICCATO LA CLASSE "SQUARE_SELECTED"
                             this.classList.add('square_selected');
     
-                            // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
-                            validSquareClicked++;
+                            // CONTROLLO CHE L'UTENTE NON ABBIA GIA CLICCATO IL QUADRATO DI OGNI ITERAZIONE
+                            if (!squareSelected.includes(this.innerText)){
+
+                                // INSERISCO L'ELEMENTO ATTUALE CLICCATO DENTRO L'ARRAY "SQUARE_SELECTED"
+                                squareSelected.push(this.innerText);
+
+                                // INCREMENTO LA VARIABILE CHE DEFINISCE IL NUMERO DI CASELLE SENZA BOMBE CLICCATE DALL'UTENTE
+                                validSquareClicked++;
+                            }
     
                             if(validSquareClicked === gridSize - bombSize){ // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 

@@ -84,6 +84,7 @@ function generateArrayBombs(arrayBombs, max, maxBombs){
     // console.log(arrayBombs.sort(function(a, b){return a-b})); // ALLA FINE DELL'ESERCIZIO RIMUOVERLO
 }
 
+
 // FUNZIONE CHE RIVELA LE BOMBE ALLA FINE DEL GIOCO
 function revealArrayBombs(arrayBombs){
 

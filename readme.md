@@ -89,6 +89,17 @@ SUPER BONUS 2: Quando si clicca su una bomba e finisce la partita, il software s
     - Stampo nella console il contenuto dell'arrayBombs ordinandolo tramite il comando sort (console.log(arrayBombs.sort(function(a, b){return a-b}))); // ALLA FINE DELL'ESERCIZIO RIMUOVERLO
 
 
+- Creare una Funzione (revealArrayBombs(arrayBombs)) che Rivela le Bombe alla Fine del Gioco:
+
+    - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
+
+    - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
+
+        - ? SE l'arrayBombs contiene l'elemento della seguente iterazione, ALLORA:
+
+            - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale.
+
+
 - Usare il comando "document.getElementById('')" per recuperare il Button HTML "play" ed inserirlo in una Constante (playButton);
 
 
@@ -143,13 +154,7 @@ SUPER BONUS 2: Quando si clicca su una bomba e finisce la partita, il software s
 
                             - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
-                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
-
-                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
-
-                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
-
-                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+                                - Richiama la funzione (revealArrayBombs(arrayBombs));
 
                                 - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
@@ -157,13 +162,7 @@ SUPER BONUS 2: Quando si clicca su una bomba e finisce la partita, il software s
 
                         - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
 
-                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
-
-                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
-
-                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
-
-                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+                            - Richiama la funzione (revealArrayBombs(arrayBombs));
 
                             - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
@@ -198,13 +197,7 @@ SUPER BONUS 2: Quando si clicca su una bomba e finisce la partita, il software s
 
                             - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
-                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
-
-                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
-
-                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
-
-                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+                                - Richiama la funzione (revealArrayBombs(arrayBombs));
 
                                 - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
@@ -212,13 +205,7 @@ SUPER BONUS 2: Quando si clicca su una bomba e finisce la partita, il software s
 
                         - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
 
-                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
-
-                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
-
-                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
-
-                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+                            - Richiama la funzione (revealArrayBombs(arrayBombs));
 
                             - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
@@ -253,13 +240,7 @@ SUPER BONUS 2: Quando si clicca su una bomba e finisce la partita, il software s
 
                             - ? SE la Variabile validSquareClicked è UGUALE a (gridSize - bombSize), ALLORA: // L'UTENTE HA CLICCATO TUTTE LE CASELLE SENZA BOMBE
 
-                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
-
-                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
-
-                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
-
-                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+                                - Richiama la funzione (revealArrayBombs(arrayBombs));
 
                                 - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai vinto! <br> Non hai beccato nessuna bomba! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
@@ -267,13 +248,7 @@ SUPER BONUS 2: Quando si clicca su una bomba e finisce la partita, il software s
 
                         - ALTRIMENTI:  // IL BLOCCO CLICCATO CONTIENE UNA BOMBA
 
-                                - Dichiarare dentro una Variabile (diventerà un Array) tutti gli elementi HTML che hanno la classe "square" (let squares = document.querySelectorAll('.square'));
-
-                                - Creare un CICLO FOR che scorre tutti gli Elementi HTML che hanno la classe "square":
-
-                                    - ? SE l'arrayBombs contiene l'elemento di ogni iterazione, ALLORA:
-
-                                        - Aggiungere la classe "square_bomb" all'elemento dell'iterazione attuale;
+                            - Richiama la funzione (revealArrayBombs(arrayBombs));
 
                             - Stampa a schermo un messaggio per l'utente: message.innerHTML = `Hai perso! <br> Punteggio : ${validSquareClicked} blocchi scoperti!`
 
